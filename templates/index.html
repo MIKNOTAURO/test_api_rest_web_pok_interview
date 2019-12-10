@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+      <div class="row">
+        {% for poke in pokemons  %}
+            <div class="col-6" style="border: 1px solid red;">
+                <p>{{ poke.name }}</p>
+                <a href="{% url 'detail-poke' id_poke=poke.id %}">Detalles +</a>
+                <img src="{{ poke.img }}" alt="img poke">
+            </div>
+        {% endfor %}
+
+      </div>
+    </div>
+{% endblock %}

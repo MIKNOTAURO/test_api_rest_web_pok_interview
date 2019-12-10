@@ -1,0 +1,4 @@
+*.pyc
+*.ini
+*.sqlite3
+.idea

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title> Pokes x tipo </title>
+{% endblock %}
+{% block content %}
+    <div class="container">
+      <div class="row">
+        {% for poke in pokes_per_type  %}
+            <div class="col-3" style="border: 1px solid red;">
+                <a href="{% url 'detail-poke' id_poke=poke.id_poke %}">{{ poke.name }} {{ poke.id_poke }}</a>
+            </div>
+        {% endfor %}
+
+      </div>
+    </div>
+{% endblock %}
